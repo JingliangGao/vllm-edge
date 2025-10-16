@@ -3,7 +3,7 @@ from torch import nn
 import torch.nn.functional as F
 import torch.distributed as dist
 
-from vllm_edge.utils.context import get_context
+from vllm_edge.entrypoints.context import get_context
 
 
 class VocabParallelEmbedding(nn.Module):

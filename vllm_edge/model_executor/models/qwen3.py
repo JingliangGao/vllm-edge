@@ -3,12 +3,12 @@ from torch import nn
 import torch.distributed as dist
 from transformers import Qwen3Config
 
-from vllm_edge.layers.activation import SiluAndMul
-from vllm_edge.layers.attention import Attention
-from vllm_edge.layers.layernorm import RMSNorm
-from vllm_edge.layers.linear import QKVParallelLinear, MergedColumnParallelLinear, RowParallelLinear
-from vllm_edge.layers.rotary_embedding import get_rope
-from vllm_edge.layers.embed_head import VocabParallelEmbedding, ParallelLMHead
+from vllm_edge.model_executor.layers.activation import SiluAndMul
+from vllm_edge.model_executor.layers.attention import Attention
+from vllm_edge.model_executor.layers.layernorm import RMSNorm
+from vllm_edge.model_executor.layers.linear import QKVParallelLinear, MergedColumnParallelLinear, RowParallelLinear
+from vllm_edge.model_executor.layers.rotary_embedding import get_rope
+from vllm_edge.model_executor.layers.embed_head import VocabParallelEmbedding, ParallelLMHead
 
 
 class Qwen3Attention(nn.Module):

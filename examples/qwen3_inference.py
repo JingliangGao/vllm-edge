@@ -3,15 +3,14 @@ from vllm_edge import LLM, SamplingParams
 from transformers import AutoTokenizer
 
 
-def main():
-    path = os.path.expanduser("/home/kylin/gjl/model/Qwen3-0.6B")
+def run():
+    path = os.path.expanduser("/root/.cache/modelscope/hub/models/Qwen/Qwen3-0.6B")
     tokenizer = AutoTokenizer.from_pretrained(path)
     llm = LLM(path, enforce_eager=True, tensor_parallel_size=1)
 
-    sampling_params = SamplingParams(temperature=0.6, max_tokens=256)
+    sampling_params = SamplingParams(temperature=0.6, max_tokens=2000)
     prompts = [
-        "introduce yourself",
-        "list all prime numbers within 100",
+        "给我讲一个2000字的故事。\n"
     ]
     prompts = [
         tokenizer.apply_chat_template(

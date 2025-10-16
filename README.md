@@ -8,7 +8,13 @@ cd vllm-edge/
 chmod +x ./build-for-debug.sh && ./build-for-debug.sh
 ```
 
-# run
+## download model    
+```shell
+modelscope download --model Qwen/Qwen3-0.6B
+```
+
+
+## run     
 ```shell
 cd vllm_edge/examples/
 python3  qwen3_inference.py

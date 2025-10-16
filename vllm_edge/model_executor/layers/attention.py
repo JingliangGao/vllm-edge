@@ -4,7 +4,7 @@ import triton
 import triton.language as tl
 
 from flash_attn import flash_attn_varlen_func, flash_attn_with_kvcache
-from vllm_edge.utils.context import get_context
+from vllm_edge.entrypoints.context import get_context
 
 
 @triton.jit

@@ -4,12 +4,12 @@ import torch.distributed as dist
 from multiprocessing.synchronize import Event
 from multiprocessing.shared_memory import SharedMemory
 
-from vllm_edge.config import Config
+from vllm_edge.model_executor.models.config import Config
 from vllm_edge.engine.sequence import Sequence
-from vllm_edge.models.qwen3 import Qwen3ForCausalLM
-from vllm_edge.layers.sampler import Sampler
-from vllm_edge.utils.context import set_context, get_context, reset_context
-from vllm_edge.utils.loader import load_model
+from vllm_edge.model_executor.models.qwen3 import Qwen3ForCausalLM
+from vllm_edge.model_executor.layers.sampler import Sampler
+from vllm_edge.entrypoints.context import set_context, get_context, reset_context
+from vllm_edge.model_executor.model_loader.loader import load_model
 
 
 class ModelRunner:

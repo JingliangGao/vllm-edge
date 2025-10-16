@@ -1,6 +1,6 @@
 from collections import deque
 
-from vllm_edge.config import Config
+from vllm_edge.model_executor.models.config import Config
 from vllm_edge.engine.sequence import Sequence, SequenceStatus
 from vllm_edge.engine.block_manager import BlockManager
 

@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from transformers import AutoTokenizer
 import torch.multiprocessing as mp
 
-from vllm_edge.config import Config
+from vllm_edge.model_executor.models.config import Config
 from vllm_edge.sampling_params import SamplingParams
 from vllm_edge.engine.sequence import Sequence
 from vllm_edge.engine.scheduler import Scheduler
